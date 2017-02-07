@@ -1,21 +1,6 @@
 <html>
   <head><title>Fishing</title>
-    <script language="javascript">
-      function calcTotal(){
-        var strRod, strBox, strBox2, prRod, prBox, prBox2, strTotal;
-        strRod=document.form.qRod.value;
-        strBox=document.form.qBox.value;
-        strBox2=document.form.qBox2.value;
-        prRod=document.form.txtRod.value;
-        prBox=document.form.txtBox.value;
-        prBox2=document.form.txtBox2.value;
-        
-        strRod=parseInt(strRod)* prRod;
-        strBox=parseInt(strBox)* prBox;
-        strBox2=parseInt(strBox2)* prBox2;
-        strTotal=(strRod+strBox+strBox2);
-        document.form.txtTotal.value=strTotal;
-      }
+    
   </head>
   
   <body bgcolor="#FFFF99" text="#800000">
@@ -72,6 +57,23 @@
         <p align="center">
         <input type="text" name="txtTotal" size="10" value="0.00"></p>
         </form>
+    
+    <script language="javascript">
+      function calcTotal(){
+        var strRod, strBox, strBox2, prRod, prBox, prBox2, strTotal;
+        strRod=document.form.qRod.value;
+        strBox=document.form.qBox.value;
+        strBox2=document.form.qBox2.value;
+        prRod=document.form.txtRod.value;
+        prBox=document.form.txtBox.value;
+        prBox2=document.form.txtBox2.value;
+        
+        strRod=parseInt(strRod)* prRod;
+        strBox=parseInt(strBox)* prBox;
+        strBox2=parseInt(strBox2)* prBox2;
+        strTotal=(strRod+strBox+strBox2);
+        document.form.txtTotal.value=strTotal;
+      }
   </body>
   
 </html>
