@@ -10,7 +10,6 @@
         prBox=document.form.txtBox.value;
         prBox2=document.form.txtBox2.value;
         strTender=document.form.txtTender.value;
-        strChange=document.form.txtChange.value;
 
         strRod=parseInt(strRod)*prRod;
         strBox=parseInt(strBox)*prBox;
@@ -19,6 +18,7 @@
         strChange=(strTender-strTotal);
         document.form.txtTotal.value=strTotal;
         document.form.txtChange.value=strChange;
+        
       }
 
       function selectColor(selectColor){
@@ -87,7 +87,7 @@
         <input type="reset" value="Clear" name="btnClear">
         <p align="center">Tender:</p>
         <p align="center">
-        <input type="text" name="txtTender" size="10" value="0.00" required></p>
+        <input type="text" name="txtTender" size="10" value="0.00"></p>
       <p align="center">Your Change is:</p>
         <p align="center">
         <input type="text" name="txtChange" size="10" value="0.00"></p>
