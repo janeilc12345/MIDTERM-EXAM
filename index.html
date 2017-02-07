@@ -2,20 +2,23 @@
   <head><title>Fishing</title>
     <script language="javascript">
       function calcTotal(){
-        var strRod, strBox, strBox2, prRod, prBox, prBox2, strTotal;
+        var strRod, strBox, strBox2, prRod, prBox, prBox2, strTotal, strTender, strChange;
         strRod=document.form.qRod.value;
         strBox=document.form.qBox.value;
         strBox2=document.form.qBox2.value;
         prRod=document.form.txtRod.value;
         prBox=document.form.txtBox.value;
         prBox2=document.form.txtBox2.value;
+        strTender=document.form.txtTender.value;
+        strChange=document.form.txtChange.value;
 
-        
         strRod=parseInt(strRod)*prRod;
         strBox=parseInt(strBox)*prBox;
         strBox2=parseInt(strBox2)*prBox2;
         strTotal=(strRod+strBox+strBox2);
+        strChange=(strTender-strTotal);
         document.form.txtTotal.value=strTotal;
+        document.form.txtChange.value=strChange;
       }
       function selectColor(selectColor){
         document.bgColor=selectColor;
@@ -77,6 +80,16 @@
         <p align="center">Your Total is:</p>
         <p align="center">
         <input type="text" name="txtTotal" size="10" value="0.00"></p>
+      
+      <p align="center">
+        <input type="submit" value="Calculate your change" name="btnSubmit" onClick="calcTotal()">
+        <input type="reset" value="Clear" name="btnClear">
+        <p align="center">Tender:</p>
+        <p align="center">
+        <input type="text" name="txtTender" size="10" value="0.00"></p>
+      <p align="center">Your Change is:</p>
+        <p align="center">
+        <input type="text" name="txtChange" size="10" value="0.00"></p>
       
       
         
