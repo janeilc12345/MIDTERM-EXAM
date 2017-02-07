@@ -2,15 +2,18 @@
   <head><title>Fishing</title>
     <script language="javascript">
       function calcTotal(){
-        var strRod, strBox, prRod, prBox, strTotal;
+        var strRod, strBox, strBox2, prRod, prBox, prBox2, strTotal;
         strRod=document.form.qRod.value;
         strBox=document.form.qBox.value;
+        strBox2=document.form.qBox2.value;
         prRod=document.form.txtRod.value;
         prBox=document.form.txtBox.value;
+        prBox2=document.form.txtBox2.value;
         
         strRod=parseInt(strRod)* prRod;
         strBox=parseInt(strBox)* prBox;
-        strTotal=(strRod+strBox);
+        strBox2=parseInt(strBox2)* prBox2;
+        strTotal=(strRod+strBox+strBox2);
         document.form.txtTotal.value=strTotal;
       }
   </head>
@@ -41,6 +44,18 @@
           <td width="48%">1 Tackle Box</td>
           <td width="10%">
             <input type="text" name="txtBox" size="5" value="2.55"></td>
+           <td width="43%"><select size="1" name="qBox">
+            <option selected value="0">Select Quantity</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+           </select></td>
+         </tr>
+         <tr>
+          <td width="48%">1 Taga Box</td>
+          <td width="10%">
+            <input type="text" name="txtBox2" size="5" value="2.55"></td>
+           <td width="43%"><select size="1" name="qBox2">
             <option selected value="0">Select Quantity</option>
             <option value="1">1</option>
             <option value="2">2</option>
